@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <time.h>
-#include <sys/time.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
 
 /* receive time adjustment, negative or positive, in nanoseconds */
 /* long long 64bit is at least −9,223,372,036,854,775,807 to +9,223,372,036,854,775,807 */
