@@ -48,18 +48,20 @@ int main(int argc, char *argv[])
     {
         for (unsigned i = 0; i < number_of_full_jumps; ++i) 
         {
-            //sleep(1);  /* a 1 second wait imitates ntpdate */
+            sleep(1);  /* a 1 second wait imitates ntpdate */
             change_time_by_nanoseconds(5000000); /* 5,000,000 ns imitates ntpdate */
         }
+        sleep(1);
         change_time_by_nanoseconds(last_jump_nanoseconds);
     }
     else  /* negative nanosecond change */
     {
         for (unsigned i = 0; i < number_of_full_jumps; ++i) 
         {
-            //sleep(1);
+            sleep(1);
             change_time_by_nanoseconds(-5000000);
         }
+        sleep(1);
         change_time_by_nanoseconds(-last_jump_nanoseconds); /* negative of absolute value imitates Euclidean modulo */
     }
     return EXIT_SUCCESS;
